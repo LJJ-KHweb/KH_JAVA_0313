@@ -1,0 +1,19 @@
+package com.kh.Variable;
+
+public class Variable {
+
+	public void savePants() {
+		String aaa = "긴바지";
+		String bbb = "반바지";
+		System.out.println(aaa);
+		System.out.println(bbb);
+	}
+	
+	
+	public void findLunchMenu() {
+		System.out.println("------- 변수를 사용하기 전 =======");
+		System.out.println("==============메뉴=============");
+		System.out.println("1. 햄버거10000 2. 순대국밥 9000");
+		System.out.println("3. 제육70000  4. 마라탕 100000");
+	}
+}

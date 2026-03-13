@@ -1,0 +1,18 @@
+package com.kh.constant;
+
+public class Constant {
+
+	public static void main(String[] args) {
+		int iEx1 = 1;
+		int iEx2 = 2;
+		int iSum = 0;
+		
+		iSum = iEx1 + iEx2;
+		
+		
+		
+		
+		System.out.print(iSum);
+	}
+	
+}

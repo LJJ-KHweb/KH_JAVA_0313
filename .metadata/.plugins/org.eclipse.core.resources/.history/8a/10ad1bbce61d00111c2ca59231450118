@@ -1,0 +1,11 @@
+package com.kh.first; //패키지 선언부 : 현재 클래스의 위치 (패키지만 다르면 같은 이름의 클래스를 만들수 있다)
+
+	//주석을 쓰는 이유 : 코드를 작성한 후 작성한 코드를 쉽게 이해하기 위함이며 유지보수 시간을 줄이기 위함
+
+public class HelloWorld {
+
+	public static void main(String[] arg) {
+		System.out.println("Hello World");
+	}
+
+}

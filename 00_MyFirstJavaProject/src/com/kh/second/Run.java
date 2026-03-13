@@ -1,0 +1,16 @@
+package com.kh.second;
+
+public class Run {
+	public static void main(String[] args) {
+
+		new com.kh.second.PrintController().printMyName();
+		
+		// 외부 클래스에 메서드 호출하고 싶다 : 클래스를 생성해서 호출한다 문법 : 클래스(이름) 별명 = new 클래스(이름)()괄호 
+		
+		
+		PrintController pc = new PrintController();
+		pc.printMyName();
+		
+	}
+
+}
