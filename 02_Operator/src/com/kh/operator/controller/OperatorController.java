@@ -99,6 +99,72 @@ public class OperatorController {
 		
 	}
 	
+	public void triple() {
+		String sIntro = "깐부치킨에 오신것을 환영합니다";
+		String sMenu1 = "1. 회장님의 입맛 그대로 AI치킨";
+		String sMenu2 = "2. 바삭한 식스팩 치킨";
+		String sMenu3 = "3. 치킨의 근본 후라이드 치킨";
+		String sGuide = "주문하실 메뉴를 선택해주세요(메뉴 번호를 입력해주세요)";
+		String sSelect1 = "회장님의 입맛 그래도 AI치킨을 주문하셨습니다";
+		String sSelect2 = "바삭한 식스팩치킨을 주문하셨습니다";
+		String sSelect3 = "치킨의 근본 후라이드치킨을 주문하셨습니다";
+		String sSelectX = "없는 메뉴를 주문하셨습니다";
+		String sSelect;
+		Scanner sc = new Scanner(System.in);
+		int menuNo;
+		boolean bCheck;
+		
+		System.out.print(sIntro + "\n" + sMenu1 + "\n" + sMenu2 + "\n"+ sMenu3+"\n"+sGuide);
+		menuNo = sc.nextInt();
+		
+		sSelect = (menuNo == 1) ? "회장님의 입맛 그래도 AI치킨을 주문하셨습니다" 
+				: (menuNo == 2) ? "바삭한 식스팩치킨을 주문하셨습니다."
+				: (menuNo == 3) ? "치킨의 근본 후라이드 치킨을 주문하셨습니다."
+				: "없는 메뉴를 주문하셨습니다.";
+		
+		if(menuNo == 1) {
+			System.out.println("회장님의 입맛 그래도 AI치킨을 주문하셨습니다,");
+		}
+		else if(menuNo == 2) {
+			System.out.println("바삭한 식스팩치킨을 주문하셨습니다,");
+		}
+		else if(menuNo == 3) {
+			System.out.println("치킨의 근본 후라이드치킨을 주문하셨습니다,");
+		}
+		else {
+			System.out.println("없는 메뉴를 주문하셨습니다.");
+		}
+		
+		
+		switch(menuNo) {
+		case 1:
+			System.out.println("회장님의 입맛 그래도 AI치킨을 주문하셨습니다,");
+			break;
+		case 2:
+			System.out.println("바삭한 식스팩치킨을 주문하셨습니다,");
+			break;
+		case 3:
+			System.out.println("치킨의 근본 후라이드치킨을 주문하셨습니다,");
+			break;
+		default:
+			System.out.println("없는 메뉴를 주문하셨습니다.");
+			break;
+		
+		}
+		
+		while(true) {
+			System.out.print(sIntro + "\n" + sMenu1 + "\n" + sMenu2 + "\n"+ sMenu3+"\n"+sGuide);
+			menuNo = sc.nextInt();
+			
+			if(menuNo == 6) {
+				break;
+			}
+			
+		}
+		
+		
+		
+	}
 	
 }
 

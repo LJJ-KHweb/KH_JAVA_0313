@@ -13,7 +13,8 @@ public class Run {
 		//oc.comparison();
 		//oc.logical();
 		//oc.andOper();
-		oc.orOper();
+		//oc.orOper();
+		oc.triple();
 	}
 
 }
