@@ -1,8 +1,8 @@
 package com.kh.chap01.run;
 
-import com.kh.chap01.condition.ConditionElse;
-import com.kh.chap01.condition.ConditionSwitch;
 import com.kh.chap02.loop.LoopFor;
+import com.kh.chap02.loop.LoopWhile;
+import com.kh.chap03.escape.EscapeBreak;
 
 public class Run {
 
@@ -22,7 +22,17 @@ public class Run {
 		//cs.findName();
 		//cs.login();
 		LoopFor lf = new LoopFor();
-		lf.method0();
+		//lf.method0();
+		//lf.gugudan();
+		//lf.mainMenu();
+		LoopWhile lw = new LoopWhile();
+		//lw.method1();
+		//lw.method3();
+		//lw.lotto();
+		EscapeBreak eb = new EscapeBreak();
+		//eb.method1();
+		eb.checkId();
+		
 	}
 
 }
@@ -57,4 +67,20 @@ public class Run {
  * 2. 무슨연산을
  * 
  * for( 초기식; 조건식; 증감식;)
+ * 
+ * 
+ * for while 차이점 
+ * for 개발자가 반복을 몇 번 해야할지 명학하게 알고 있을 때
+ * while 개발자가 반복을 몇 번 해야할지 가늠할 수 가 없을 때
+ * random() 의 결과 값은 : 0.0 ~0.9999999999999999
+ * 
+ * break;
+ * 주의 사항 switch문 내부에 작성하는 break; 문과는 구분을 해야함
+ * 		   switch문 내부에 있는 break는 switch문을 빠져나가는 용도로 사용
+ * break : break문을 만나는 순간 "가장 가까운 반복문"dmf Qkwuskrka
+ * 		   break문이 속해 있는 반복문 "한 겹"을 빠져나감
+ * 
+ * continue : 반복문안에서 사용하는 문법
+ * 반복문안에서 continue를 만나면 이후에 모든 코드를 pass
+ * 반복문 최상단 scope로 이동
  */ 
