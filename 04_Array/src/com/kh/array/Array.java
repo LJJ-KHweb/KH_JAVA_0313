@@ -101,6 +101,12 @@ public class Array {
 		System.out.println(Arrays.toString(origin));
 		System.out.println(Arrays.toString(copy));
 		System.out.println(Arrays.toString(deepCopy));
+		int[] copy2 = new int[10];
+		//네이밍컨ㄴ벤션 == 클래스/ 인터페이스 == 첫글자가 대문자
+		//밑에있는거 깊은 복사 메소드들
+		//System.arraycopy(deepCopy, 0, copy2, 0, 0);
+		//int[] Test = Arrays.copyOf(null, 0);
+		//int[] Test = origin.clone()
 		
 	}
 	/*
@@ -122,6 +128,8 @@ public class Array {
 // ex) int[] array;
 // ex_ int[] array = new int[정수]; 정수-> 원하는 배열의 크기
 // Arrays.toString(배열식별자) -> 배열의 요소들을 출력
+// 깊은복사
+//System.arraycopy(원본 배열, 원본배열에서 복사할 첫번째 인덱스, 깊은복사를 할 배열, 복사할 배열에 복사받을 인덱스, 원본배열에서 몇개를 복사받을지);
 
 
 /*
@@ -138,6 +146,8 @@ public class Array {
  *연결이 끊긴 할당을 받은 메모리는 Garbage Collection이 일정시간 지나고 청소함
  * -> 참조하고 있던 연결이 끊겨야 garbage collection이 일을하기때문에 null값을 대입해 reference를 0으로 만들어준다.
  * 
+ * 배열(얕은복사)♥ 주소값을 대입하는 것 -> 가리키고 있는 대상이 같다
+ * 배열(깊은복사) 기존배열에서 더큰 배열이 필요할때 
  * 
  * */
 
