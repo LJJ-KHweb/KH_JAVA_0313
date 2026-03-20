@@ -1,9 +1,0 @@
-package com.kh.Variable;
-
-public class Variable {
-
-	public void savePants() {
-		String a = "긴바지";
-		String b = "반바지";
-	}
-}
