@@ -18,4 +18,7 @@
     <fullyQualifiedTypeName name="java.lang.System.Logger.Level"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.System.LoggerFinder"/>
+    <fullyQualifiedTypeName name="com.kh.chap04.view.FieldView"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.kh.chap05.model.vo.Member"/>
 </qualifiedTypeNameHistroy>
