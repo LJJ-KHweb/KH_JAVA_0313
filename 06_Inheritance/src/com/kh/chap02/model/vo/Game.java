@@ -1,6 +1,6 @@
 package com.kh.chap02.model.vo;
 
-public class Game {
+public class Game extends Object {
 	private String gameName;
 	private String publisher;
 	public Game() {
