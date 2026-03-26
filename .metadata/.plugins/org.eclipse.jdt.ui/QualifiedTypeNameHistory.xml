@@ -25,4 +25,12 @@
     <fullyQualifiedTypeName name="com.kh.chap02.model.vo.AosGame"/>
     <fullyQualifiedTypeName name="com.kh.chap02.model.vo.FpsGame"/>
     <fullyQualifiedTypeName name="com.kh.chap02.model.vo.RpgGame"/>
+    <fullyQualifiedTypeName name="kh.com.chap01.run.model.vo.Chef"/>
+    <fullyQualifiedTypeName name="kh.com.chap03.model.vo.MainChef"/>
+    <fullyQualifiedTypeName name="kh.com.chap03.model.vo.SaladChef"/>
+    <fullyQualifiedTypeName name="kh.com.chap03.model.vo.controller.CookingController"/>
+    <fullyQualifiedTypeName name="kh.com.chap03.model.vo.controller.Cooking"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="com.kh.controller.UncheckedException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>
