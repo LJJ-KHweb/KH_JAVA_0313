@@ -12,7 +12,6 @@
     <fullyQualifiedTypeName name="com.kh.chap01.condition.ConditionIf"/>
     <fullyQualifiedTypeName name="com.kh.chap03.escape.EscapeBreak"/>
     <fullyQualifiedTypeName name="com.kh.array.Array"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System.Logger"/>
     <fullyQualifiedTypeName name="java.lang.System.Logger.Level"/>
@@ -31,7 +30,13 @@
     <fullyQualifiedTypeName name="kh.com.chap03.model.vo.controller.Cooking"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="com.kh.controller.UncheckedException"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.kh.chap03.model.dao.FileCharDao"/>
+    <fullyQualifiedTypeName name="com.kh.chap04.model.dao.BufferDao"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="com.kh.chap04.model.dao.ObjectDao"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

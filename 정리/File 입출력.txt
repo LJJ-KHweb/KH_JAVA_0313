@@ -1,0 +1,147 @@
+File 입출력
+
+String 메소드
+0replace(str1, str2) 
+(str1) :기존문자열에서 바꾸고 싶은 문자열 
+(str2): 바꾸고 싶은 문자열
+
+
+toUpperCase(): 문자열 모두 대문자로 변환
+toLowerCase(): 문자열 모두 소문자로 변환
+
+문자열 분리시키기
+split("str1") 
+str1 = 분리할 기준점
+반환은 분리한 문자열을 String[]로 반환
+
+StringTokenizer(str1, str2)
+생성자를 호출하면서 문자열을 분히할수있음
+nextToken() -> 분리한 문자열을 토큰별로 반환
+hasMoreTokens() -> 남아있는 토큰이 있다면 true 없다면 false를 리턴
+
+Wrapper Class
+기본자료형을 참조자료형으로 포장해주는 클래스를 뢔퍼클래스라고 함
+
+언제 쓰는지?
+기본자료형을 객체로 취급해야하는 경우
+다형성을 적용해야하는 경우
+매개변수 자료형이 기본자료형은 못받는경우
+
+boolean -> Boolean
+char	-> Character
+byte -> Byte
+short -> Short
+int -> integer
+long -> Long
+float -> Float
+double -> Double
+
+a.compareTo(b);
+a가 b보다 크면 1을 반환
+a가 b보다 작으면 -1을 반환
+같으면 0을 반환
+
+파싱(parsing) = 특정 데이터를 규칙에 따라서 분석하고 해석하는 과정
+String str1 = "10";
+String str2 = "1.1";
+int i = Integer.parseInt(str1);
+double d = Double.parseDouble(str2);
+System.out.println(i+d);
+출력값 11.1
+
+IO를 진행하고 싶다면 먼저 프로그램하고 외부매체간의 "통로:를 만들어야함
+"통로" -> Stream(스트림)
+
+스트림의 특징
+일방통행  
+->입력이면 입력/ 출력이면 출력
+   입력용과 출력용이 따로존재
+
+선입선출(Frist in Frist out) 
+-> 시간지연 문제가 발생할수있음(앞에있는애가 나가야 다음 애가 나갈수있음)
+
+스트림의 구분
+
+-스트림의 사이즈로 구분
+
+바이트 스트림 
+->1byte짜리 데이터가 이동할수 있는 통로
+=> 입력(XXXInputStream) / 출력(XXXOutputStream)
+
+문자 스트림
+->2byte짜리 데이터가 이동할수 있는 통로
+=> 입력(XXXReader) / 출력(XXXWriter)
+
+-외부매체와 직접적인 연결 여부
+
+기반 스트림
+-> 외부메체랑 직접적으로 연결되는 스트림
+
+보조스트림
+->기반스트림의 성능을 향상시키기 위한 용도로 사용하는 스트림 (단독 사용이 불가능 -> 반드시 기반 스트림이 존재해야됨)
+속도향사, 자료형에 맞춰서 반환, 객체단위로 입출력, 바이트 <==> 문자
+
+VO	(Value Object)
+DAO	(Data Access Object)
+-> 데이터가 보관되어있는 공간에 직접 접근해서 입력 또는 출력하는 메소드를 구현해줌
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
