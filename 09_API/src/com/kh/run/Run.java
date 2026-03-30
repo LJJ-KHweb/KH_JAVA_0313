@@ -11,7 +11,9 @@ public class Run {
 		// sc.method2(); 
 		// sc.method3();
 		// sc.method4();
-		sc.method5();
+		//sc.method5();
+		//sc.method6();
+		sc.method7();
 	}
 	
 
