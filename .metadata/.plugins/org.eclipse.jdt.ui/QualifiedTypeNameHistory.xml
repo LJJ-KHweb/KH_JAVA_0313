@@ -34,9 +34,16 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="com.kh.chap03.model.dao.FileCharDao"/>
     <fullyQualifiedTypeName name="com.kh.chap04.model.dao.BufferDao"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="com.kh.chap04.model.dao.ObjectDao"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.kh.chap02.model.StringBox"/>
+    <fullyQualifiedTypeName name="com.kh.chap02.model.vo.IntegerBox"/>
+    <fullyQualifiedTypeName name="com.kh.chap02.model.Box"/>
+    <fullyQualifiedTypeName name="com.kh.chap02.model.vo.Plant"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

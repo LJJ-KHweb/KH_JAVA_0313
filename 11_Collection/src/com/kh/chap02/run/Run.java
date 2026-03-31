@@ -121,6 +121,9 @@ public class Run {
 		plants.clear();
 		System.out.println(plants);
 		System.out.println(plants.isEmpty());
+		
+		
+		
 	}
 
 
