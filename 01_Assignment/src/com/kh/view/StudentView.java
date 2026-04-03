@@ -11,6 +11,12 @@ import com.kh.model.vo.StudentDto;
 public class StudentView {
 	private Scanner sc = new Scanner(System.in);
 	private StudentController controller = new StudentController();
+	private static final int NAME_OPTION = 0;
+	private static final int GENDER_OPTION = 1;
+	private static final int PASSWORD_OPTION = 2;
+	private static final int ID_OPTION = 3;
+	private static final int SCORE_OPTION = 4;
+	private static final int AGE_OPTION = 5;
 
 	public void mainView() {
 
@@ -63,48 +69,60 @@ public class StudentView {
 		System.out.println("===== 학생 등록 창입니다. =====");
 		System.out.print("등록하실 학생 이름을 입력해주세요(두글자 이상) >");
 		String name = sc.nextLine();
-		if(checkByName(name)) {
-			System.out.println("이름이 1자리 이하입니다.");
-			System.out.println("메인메뉴로 돌아갑니다.");
+		if(checkByString(name, NAME_OPTION)) {
 			return;
 		}
+		/*
+		 * if(checkByName(name)) { System.out.println("이름이 1자리 이하입니다.");
+		 * System.out.println("메인메뉴로 돌아갑니다."); return; }
+		 */
 		System.out.print("아이디를 입력해주세요(4자리 이상) > ");
 		String id = sc.nextLine();
-		if(checkById(id)) {
-			System.out.println("아이디가 4자리 미만입니다.");
-			System.out.println("메인메뉴로 돌아갑니다.");
+		if(checkByString(id, ID_OPTION)) {
 			return;
 		}
+		/*
+		 * if(checkById(id)) { System.out.println("아이디가 4자리 미만입니다.");
+		 * System.out.println("메인메뉴로 돌아갑니다."); return; }
+		 */
 		System.out.print("비밀번호를 입력해 주세요(4자리 이상) > ");
 		String password = sc.nextLine();
-		if(checkByPassword(password)) {
-			System.out.println("비밀번호가 4자리 미만입니다.");
-			System.out.println("메인메뉴로 돌아갑니다.");
+		if (checkByString(password, PASSWORD_OPTION)) {
 			return;
 		}
+		/*
+		 * if(checkByPassword(password)) { System.out.println("비밀번호가 4자리 미만입니다.");
+		 * System.out.println("메인메뉴로 돌아갑니다."); return; }
+		 */
 		System.out.print("성별을 입력해 주세요(남성or여성) > ");
 		String gender = sc.nextLine();
-		if(checkByGender(gender)) {
-			System.out.println("성별은 남성 or 여성만 선택이 가능합니다.");
-			System.out.println("메인메뉴로 돌아갑니다.");
+		/*
+		 * if (checkByGender(gender)) { System.out.println("성별은 남성 or 여성만 선택이 가능합니다.");
+		 * System.out.println("메인메뉴로 돌아갑니다."); return; }
+		 */
+		if (checkByString(gender, GENDER_OPTION)) {
 			return;
 		}
-		
 		System.out.print("나이를 입력해 주세요(1살이상) > ");
 		try {
 			int age = Integer.parseInt(sc.nextLine());
-			if(checkByAge(age)) {
-				System.out.println("나이는 1살이상이여야 합니다.");
-				System.out.println("메인메뉴로 돌아갑니다.");
+			if (checkByInt(age, AGE_OPTION)) {
 				return;
 			}
+			/*
+			 * if (checkByAge(age)) { System.out.println("나이는 1살이상이여야 합니다.");
+			 * System.out.println("메인메뉴로 돌아갑니다."); return; }
+			 */
+			
 			System.out.print("점수를 입력해주세요(0점이상) > ");
 			int score = Integer.parseInt(sc.nextLine());
-			if(checkByScore(score)) {
-				System.out.println("점수는 0점이상이여야 합니다.");
-				System.out.println("메인메뉴로 돌아갑니다.");
+			if (checkByInt(score, AGE_OPTION)) {
 				return;
 			}
+			/*
+			 * if (checkByScore(score)) { System.out.println("점수는 0점이상이여야 합니다.");
+			 * System.out.println("메인메뉴로 돌아갑니다."); return; }
+			 */
 			boolean result = controller.createStudent(new StudentDto(name, gender, password, id, score, age));
 			if (result) {
 				System.out.println("학생 등록에 성공하셨습니다.");
@@ -126,7 +144,7 @@ public class StudentView {
 			return;
 		}
 		for (Student s : list) {
-			readOneStudent(s,false);
+			readOneStudent(s, false);
 		}
 	}
 
@@ -161,7 +179,7 @@ public class StudentView {
 	private void deleteStudent() {
 		System.out.print("삭제하실 학생 아이디를 입력해주세요 >");
 		Student student = checkLogIn();
-		if(student == null) {
+		if (student == null) {
 			return;
 		}
 		controller.deleteStudent(student);
@@ -189,11 +207,12 @@ public class StudentView {
 		}
 
 	}
+
 	private void searchStudent() {
 		System.out.print("개별 검색하실 학생의 이름을 알려주세요 > ");
-		String name =sc.nextLine();
+		String name = sc.nextLine();
 		Student student = controller.searchStudent(name);
-		if(student == null) {
+		if (student == null) {
 			return;
 		}
 		readOneStudent(student, true);
@@ -205,47 +224,58 @@ public class StudentView {
 		System.out.println("학생 나이 : " + s.getAge());
 		System.out.println("학생 성별 : " + s.getGender());
 		System.out.println("학생 성적 : " + s.getScore());
-		if(check) {
+		if (check) {
 			System.out.println("학생 아이디 : " + s.getId());
 			System.out.println("학생 비밀번호 : " + s.getPassword());
 		}
 		System.out.println("===========================");
 	}
-	public boolean checkByName(String name) {
-		if(name.length() < 2) {
+
+	private boolean checkByString(String str, int option) {
+		if (option == NAME_OPTION && str.length() < 2) {
+			return true;
+		}
+		if (option == ID_OPTION && str.length() < 4) {
+			return true;
+		}
+		if (option == PASSWORD_OPTION && str.length() < 4) {
+			return true;
+		}
+
+		if (option == GENDER_OPTION && !("남성".equals(str) || "여성".equals(str))) {
 			return true;
 		}
 		return false;
 	}
-	
-	public boolean checkById(String id) {
-		if(id.length() < 4) {
+
+	private boolean checkByInt(int i, int option) {
+		if (option == AGE_OPTION && i <= 1) {
 			return true;
 		}
-		return false;
-	}
-	public boolean checkByPassword(String password) {
-		if(password.length() < 4) {
+		if (option == SCORE_OPTION && i < 0) {
 			return true;
 		}
+
 		return false;
 	}
-	public boolean checkByGender(String gender) {
-		if("남성".equals(gender)||"여성".equals(gender)) {
-			return false;
-		}
-		return true;
-	}
-	public boolean checkByAge(int age) {
-		if(age <= 1) {
-			return true;
-		}
-		return false;
-	}
-	public boolean checkByScore(int score) {
-		if(score < 0) {
-			return true;
-		}
-		return false;
-	}
+
+	/*
+	 * private boolean checkByName(String name) { if (name.length() < 2) { return
+	 * true; } return false; }
+	 * 
+	 * private boolean checkById(String id) { if (id.length() < 4) { return true; }
+	 * return false; }
+	 * 
+	 * private boolean checkByPassword(String password) { if (password.length() < 4)
+	 * { return true; } return false; }
+	 * 
+	 * private boolean checkByGender(String gender) { if ("남성".equals(gender) ||
+	 * "여성".equals(gender)) { return false; } return true; }
+	 * 
+	 * private boolean checkByAge(int age) { if (age <= 1) { return true; } return
+	 * false; }
+	 * 
+	 * private boolean checkByScore(int score) { if (score < 0) { return true; }
+	 * return false; }
+	 */
 }

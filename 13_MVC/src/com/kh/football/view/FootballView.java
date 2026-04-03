@@ -12,6 +12,7 @@ import com.kh.football.model.vo.FootballPlayer;
 public class FootballView {
 	private Scanner sc = new Scanner(System.in);
 	private FootballController fc = new FootballController();
+	private	BoardView bv = new BoardView();
 
 	public void mainMenu() {
 		while (true) {
@@ -21,6 +22,9 @@ public class FootballView {
 			System.out.println("2.축구선수 추가하기");
 			System.out.println("3.축구선수 수정하기");
 			System.out.println("4.축구선수 삭제하기");
+			System.out.println("5.축구선수 정보 출력하기");
+			System.out.println("6.축구선수 검색하기");
+			System.out.println("7.축구 이야기 게시판");
 			System.out.println("0.축구선수 종료하기");
 			System.out.println();
 			System.out.print("어떤 기능을 이용하시겠어요 > ");
@@ -51,6 +55,15 @@ public class FootballView {
 			case 4:
 				deleteFootballPlayer();
 				break;
+			case 5:
+				fc.outputFootballPlayer();
+				break;
+			case 6:
+				serachFootballPlayer();
+				break;
+			case 7:
+				bv.boardMenu();
+				break;
 			default:
 				System.out.println("없는 메뉴 입니다. 다시 선택해주세요");
 				break;
@@ -58,6 +71,28 @@ public class FootballView {
 
 		}
 
+	}
+
+	private void serachFootballPlayer() {
+		System.out.println("선수 검색 서비스입니다.");
+		System.out.print("찾고 싶은 이름의 키워드를 입력해주세요 > ");
+		String keyword = sc.nextLine();
+		List<FootballPlayer> searched = fc.searchByKeyword(keyword);
+		if(searched.isEmpty()) {
+			System.out.println("================================");
+			System.out.println("검색결과가 존재하지 않습니다.");
+			System.out.println("================================");
+		}else {
+			System.out.println();
+			System.out.println("검색 결과 입니다.");
+
+			for(FootballPlayer player : searched) {
+				System.out.println("이름 : " + player.getName() + " 포지션 : " + player.getPosition() + " 등 변호 : " + player.getBackNumber());
+			}
+			System.out.println();
+		}
+		
+		
 	}
 
 	private void selectAll() {

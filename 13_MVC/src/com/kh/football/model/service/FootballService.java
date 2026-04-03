@@ -3,6 +3,7 @@ package com.kh.football.model.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kh.football.model.dao.FootballPlayerDao;
 import com.kh.football.model.dto.FootballPlayerDto;
 import com.kh.football.model.vo.FootballPlayer;
 
@@ -107,5 +108,29 @@ public class FootballService {
 			}
 		}
 		return index;
+	}
+	public void outputFootballPlayer() {
+		new FootballPlayerDao().outputFootballPlayer(list);
+		
+	}
+
+	public List<FootballPlayer> searchByKeyword(String keyword) {
+		List<FootballPlayer> searched = new ArrayList()
+				;
+		
+		for(FootballPlayer player : list) {
+			if(player.getName().contains(keyword)) {
+				searched.add(player);
+			}
+		}
+		
+		List<FootballPlayer> search = list.stream()
+									//.filter(f->f.getName().contains(keyword))
+									//.filter(f->f.getPosition().contains(keyword))
+									//.filter(f->f.getBackNumber() == keyword)
+									.toList();
+		
+		return searched;
+		
 	}
 }

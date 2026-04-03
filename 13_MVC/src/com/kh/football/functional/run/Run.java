@@ -53,6 +53,8 @@ public class Run {
 		Supplier<Material> defaultM = () -> new Material("닭고기", 4000, "빨간색");
 		Material chicken = defaultM.get();
 		
+		Material found;
+		
 		
 	}
 
